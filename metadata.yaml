@@ -1,0 +1,61 @@
+_repo: Hero-Tales-from-American-History_1864
+_version: 0.0.1
+creator:
+  authors:
+  - agent_name: Lodge, Henry Cabot
+    birthdate: 1850
+    deathdate: 1924
+    gutenberg_agent_id: '728'
+    url: http://www.gutenberg.org/2009/agents/728
+    wikipedia: http://en.wikipedia.org/wiki/Henry_Cabot_Lodge
+  - agent_name: Roosevelt, Theodore
+    aliases:
+    - Roosevelt, Teddy
+    - United States President (1901-1909)
+    birthdate: 1858
+    deathdate: 1919
+    gutenberg_agent_id: '729'
+    url: http://www.gutenberg.org/2009/agents/729
+    wikipedia: http://en.wikipedia.org/wiki/Theodore_Roosevelt
+description: Title; Contents; George Washington; Daniel Boone and the Founding of
+  Kentucky; George Rogers Clark and the Conquest of the Northwest; The Battle of Trenton;
+  Bennington; King's Mountain; The Storming of Stony Point; Gouverneur Morris; The
+  Burning of the ""Philadelphia""; The Cruise of the ""Wasp""; The ""General Armstrong""
+  Privateer; The Battle of New Orleans; John Quincy Adams and the Right of Petition;
+  Francis Parkman; ""Remember the Alamo""; Hampton Roads; The Flag; The Death of Stonewall
+  Jackson; The Charge at Gettysburg; General Grant and the Vicksburg Campaign; Robert
+  Gould Shaw
+gutenberg_bookshelf:
+- Children's History
+- US Civil War
+gutenberg_issued: '1999-08-01'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '1864'
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- !lcc 'E151'
+- !lcsh 'United States -- History'
+- !lcsh 'Pioneers -- United States -- Biography -- Anecdotes'
+- !lcsh 'Heroes -- United States -- Biography -- Anecdotes'
+- !lcsh 'United States -- Biography -- Anecdotes'
+- !lcsh 'Generals -- United States -- Biography -- Anecdotes'
+- !lcsh 'National characteristics, American -- Anecdotes'
+- !lcsh 'United States -- History -- Anecdotes'
+- !lcsh 'United States -- Biography'
+- GITenberg
+tableOfContents: George Washington -- Daniel Boone and the founding of Kentucky --
+  George Rogers Clark and the conquest of the Northwest -- The battle of Trenton --
+  Bennington -- King's Mountain -- The storming of Stony Point -- Gouverneur Morris
+  -- The burning of the "Philadelphia" -- The cruise of the "Wasp" -- The "General
+  Armstrong" privateer -- The battle of New Orleans -- John Quincy Adams and the right
+  of petition -- Francis Parkman -- "Remember the Alamo" -- Hampton roads -- The flag
+  -- The death of Stonewall Jackson -- The charge at Gettysburg -- General Grant and
+  the Vicksburg campaign -- Robert Gould Shaw -- Charles Russell Lowell -- Sheridan
+  at Cedar Creek -- Lieutenant Cushing and the ram "Albemarle" -- Farragut at Mobile
+  Bay -- Lincoln.
+title: Hero Tales from American History
+url: http://www.gutenberg.org/ebooks/1864
