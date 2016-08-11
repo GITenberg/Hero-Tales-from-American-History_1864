@@ -1,0 +1,61 @@
+sudo: required
+dist: trusty
+language: ruby
+
+before_install:
+before_install:
+- gem install asciidoctor -v 1.5.2
+- gem install tilt
+- sudo pip install git+https://github.com/gitenberg-dev/gitberg
+- sudo pip install pillow
+- sudo pip install cssutils
+- sudo pip install docutils
+- sudo pip install roman
+- sudo pip install git+https://github.com/gitenberg-dev/pg-epubmaker
+script:
+- VERSION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['_version'];"`
+- git clone https://github.com/gitenberg-dev/asciidoctor-htmlbook.git
+- sudo pip install -r asciidoctor-htmlbook/gitberg-machine/requirements.txt
+
+- /usr/bin/python -c "from gitenberg import travis; travis.build_epub()"
+- ebook-convert book.epub book.mobi
+- xvfb-run ebook-convert book.epub book.pdf
+branches:
+  only:
+  - master
+notifications:
+  webhooks:
+    urls:
+      - https://unglue.it/api/travisci/webhook
+    on_success: always
+    on_failure: never
+    on_start: never
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: ZIuPviPFE+XK+sIuggnYD91OeMGZ1aspFp2pNJVz7SB0W3QuckmQtNUl799t+FDzCRB5WpX2tUTcjSMMgIiLMYXxzjZzIqE35pQPKZSwH/HOuWcJsCrrdB1ZlYl80pRHcdZ9cOaxLNhiVkYQwG12e1VJNqoEvgBCQaKhg3ihhjMcHFocs1eFzjVM/6t/wtSogbU3kCoQbR5fO0FWEKLYoAGWIrRoW5MptRDUyH3J2cwOf1+mYMkukrH7ogGB0ftWcsiG+Ysa5IWfvd59mSJEflczahW0Zt1TOYzI1grg/TsB9czFuiqCbCZBbuQx4zYqEQHh8sp2YEzW4V9tpL4pqqDC/ak3veHuuB+/B4qsr/s6wDnbDNCLIRQriaOLFD0pn0pmIWjAOGLPlIfD9Wgn1kQIHEAqHyly1QUeDAUksw+hddzOmvVp7fIU8okOk7UAM3dVFO/FjSyVn4oKNqiGQgP6lOtrc3xHj3mRtC7aF7dRg9deaakdJUkSKHkxNPW1Wc76ZxEAuMoVt06CKmj/dPIrevMPO5ermE2eXLbM47iqJLt/PGfaUm3lGlurdULCS2ylJH14qyjjCalzr2JFzG+rb35XpprjndoAK89gALGnM80etixYRQLrX79KrFbG1JNo/7nta0EQzdLK9P1Y7MbLWvezlL259rlZna6YhaA=
+  file:
+    - book.epub
+    - book.mobi
+    - book.pdf
+  "on":
+    repo: GITenberg/Hero-Tales-from-American-History_1864
+addons:
+  apt:
+    packages:
+    - xsltproc
+    - xvfb
+    - calibre
+    - python-pip
+    - git
+    - python-dev
+    - libjpeg-dev
+    - libpng-dev
+    - libfreetype6
+    - libfreetype6-dev
+    - zlib1g-dev
+    - python-lxml
+    - libxml2-dev
+    - libxslt1-dev
+    - tidy
