@@ -1,5 +1,8 @@
 _repo: Hero-Tales-from-American-History_1864
-_version: 0.1.0
+_version: 0.2.0
+covers:
+- cover_type: generated
+  image_path: cover.png
 creator:
   authors:
   - agent_name: Lodge, Henry Cabot
@@ -25,6 +28,8 @@ description: Title; Contents; George Washington; Daniel Boone and the Founding o
   Francis Parkman; ""Remember the Alamo""; Hampton Roads; The Flag; The Death of Stonewall
   Jackson; The Charge at Gettysburg; General Grant and the Vicksburg Campaign; Robert
   Gould Shaw
+edition_identifiers:
+  edition_id: http://www.gutenberg.org/ebooks/1864#Hero-Tales-from-American-History
 gutenberg_bookshelf:
 - Children's History
 - US Civil War
